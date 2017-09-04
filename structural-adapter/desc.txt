@@ -1,0 +1,8 @@
+
+# https://springframework.guru/gang-of-four-design-patterns/adapter-pattern/
+
+Target (LightSwitch): The existing interface that clients communicate with.
+Adaptee (Candle): The new incompatible interface that needs adapting - an old legacy code for instance
+Adapter (CandleAdapter): A class that adapts the Adaptee to the Target.
+
+Client (AdapterApplication): Communicates with the Target.

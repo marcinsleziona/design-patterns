@@ -1,0 +1,9 @@
+
+# https://springframework.guru/gang-of-four-design-patterns/decorator-pattern/
+
+Component (Pizza): Is an abstract base class that can be decorated with responsibilities dynamically.
+ConcreteComponent(ChickenPizza, HawaiianPizza and MargheritaPizza): Are concrete classes that extends Component to represent objects to which additional responsibilities can be attached.
+
+Decorator (PizzaDecorator): Is an abstract class that extends Component and acts as the base class for concrete decorator classes.
+
+ConcreteDecorator (BBQSauce, GarlicSauce, Rucola and ExtraCheese): Are concrete classes that extends Decorator to decorate Components with responsibilities.

@@ -1,0 +1,8 @@
+
+# https://springframework.guru/gang-of-four-design-patterns/bridge-pattern/
+
+Abstraction (Image): Is the interface implemented as an abstract class that clients communicates with.
+RefinedAbstraction (BmpImage and TiffImage): Are classes that implement or extend Abstraction.
+
+Implementor (ImageConverter): Is the interface of the implementation class hierarchy.
+ConcreteImplementor(BmpToTiffImageConverter and TiffToBmpImageConverter): Are concrete subclasses that implements Implementor.

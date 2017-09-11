@@ -10,13 +10,18 @@ import java.util.List;
  */
 public class CoinClient {
 
-    static List<String> values = Arrays.asList("1", "2", "5", "10", "20", "50");
+    static List<String> coinageMetals = Arrays.asList("Gold", "Silver", "CuproNickel", "ManganeseBronze");
 
     public static void main(String[] args) {
         for (int i = 0; i < 10000; i++) {
-            String value = values.get(RandomUtils.nextInt(0, values.size()));
-            System.out.println(CoinFactory.getCoinByValue(value).getValue());
+            String value = coinageMetals.get(RandomUtils.nextInt(0, coinageMetals.size()));
+            Coin c = CoinFactory.getCoinByMetal(value);
+            c.print(getRandomValue(CoinValue.values()));
         }
+    }
+
+    private static CoinValue getRandomValue(CoinValue[] values) {
+        return values[RandomUtils.nextInt(0, values.length)];
     }
 
 }

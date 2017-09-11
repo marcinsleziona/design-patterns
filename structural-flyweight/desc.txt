@@ -2,10 +2,11 @@
 # https://springframework.guru/gang-of-four-design-patterns/flyweight-pattern/
 The Flyweight Pattern reduces repeated data, thus reduces memory consumption when dealing with large numbers of objects.
 
-Intrinsic data: Information that is stored in the flyweight object. The information is independent of the flyweight’s context, thereby making it sharable. While applying the pattern, you take all of the objects that have the same intrinsic data and replace them with a single flyweight.
-Extrinsic data: Information that depends on the flyweight’s context and hence cannot be shared. Client objects stores and computes extrinsic data and passes it to the flyweight when it needs it.
+Intrinsic data (Metal): Information that is stored in the flyweight object. The information is independent of the flyweight’s context, thereby making it sharable. While applying the pattern, you take all of the objects that have the same intrinsic data and replace them with a single flyweight.
+Extrinsic data (Value): Information that depends on the flyweight’s context and hence cannot be shared. Client objects stores and computes extrinsic data and passes it to the flyweight when it needs it.
 
-Flyweight (RaceCar): Abstract class or interface for flyweight objects. Declares method through which flyweights can receive and act on extrinsic state. Although Flyweight enables sharing, it is not mandatory that all Flyweight subclasses must be shared.
-ConcreteFlyweight(FlyweightMidgetCar and FlyweightSprintCar): Extends/Implements Flyweight to represent flyweight objects that can be shared.
-FlyweightFactory(CarFactory): Creates and manages flyweight objects. When a client requests a flyweight object, FlyweightFactory provides an existing one or creates a new one, if it does not exists.
-Client(RaceCarClient): Requests FlyweightFactory for a flyweight object, and then computes and passes the extrinsic data to it.
+Flyweight (Coin): Abstract class or interface for flyweight objects. Declares method through which flyweights can receive and act on extrinsic state. Although Flyweight enables sharing, it is not mandatory that all Flyweight subclasses must be shared.
+ConcreteFlyweight(---): Extends/Implements Flyweight to represent flyweight objects that can be shared.
+
+FlyweightFactory(CoinFactory): Creates and manages flyweight objects. When a client requests a flyweight object, FlyweightFactory provides an existing one or creates a new one, if it does not exists.
+Client(CoinClient): Requests FlyweightFactory for a flyweight object, and then computes and passes the extrinsic data to it.

@@ -5,13 +5,13 @@ package pl.ms.designpatterns.flyweight;
  */
 public class Coin {
 
-    private String value;
+    private String metal;
 
-    public Coin(String value) {
-        this.value = value;
+    public Coin(String metal) {
+        this.metal = metal;
     }
 
-    public String getValue() {
-        return value;
+    public void print(CoinValue value) {
+        System.out.println(String.format("Made of: %20s with value: %5s", metal, value));
     }
 }

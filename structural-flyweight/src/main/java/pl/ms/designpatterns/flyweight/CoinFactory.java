@@ -8,14 +8,14 @@ import java.util.Map;
  */
 public class CoinFactory {
 
-    private static Map<String, Coin> coins = new HashMap<>();
+    private static Map<String, Coin> metals = new HashMap<>();
 
-    public static Coin getCoinByValue(String value) {
-        if(coins.containsKey(value)) {
-            return coins.get(value);
+    public static Coin getCoinByMetal(String metal) {
+        if(metals.containsKey(metal)) {
+            return metals.get(metal);
         }
-        Coin coin = new Coin(value);
-        coins.put(value, coin);
+        Coin coin = new Coin(metal);
+        metals.put(metal, coin);
 
         return coin;
     }

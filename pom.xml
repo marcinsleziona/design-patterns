@@ -270,6 +270,7 @@
         <module>structural-decorator</module>
         <module>structural-facade</module>
         <module>structural-flyweight</module>
+        <module>structural-proxy</module>
     </modules>
 
     <dependencyManagement>

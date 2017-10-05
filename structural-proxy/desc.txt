@@ -2,9 +2,9 @@
 # https://springframework.guru/gang-of-four-design-patterns/proxy-pattern/
 The Proxy pattern uses a proxy (surrogate) object “in place of” another object. The objective of a proxy object is to control the creation of and access to the real object it represents.
 
-Subject (ReportGenerator): Is an interface for both the real object and its proxy. The Subject enables the proxy to be used anywhere the real object is expected.
-RealSubject (ReportGeneratorImpl): The real object that is expensive to create, requires protection, or running on a remote JVM. RealSubject implements Subject and we create proxy of it.
-Proxy (ReportGeneratorImplProxy): Implements Subject and maintains a reference to RealSubject.
+Subject (ImagePrinter): Is an interface for both the real object and its proxy. The Subject enables the proxy to be used anywhere the real object is expected.
+RealSubject (RealImagePrinter): The real object that is expensive to create, requires protection, or running on a remote JVM. RealSubject implements Subject and we create proxy of it.
+Proxy (ProxyImagePrinter): Implements Subject and maintains a reference to RealSubject.
 
 The RealSubject might initialize itself in a constructor so creating a proxy would lazy load the data.
 

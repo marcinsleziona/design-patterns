@@ -264,6 +264,7 @@
     </build>
 
     <modules>
+        <module>behavior-cor</module>
         <module>structural-adapter</module>
         <module>structural-bridge</module>
         <module>structural-composite</module>

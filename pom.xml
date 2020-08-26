@@ -207,37 +207,37 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>buildnumber-maven-plugin</artifactId>
-                <version>${org.codehaus.mojo-buildnumber-maven-plugin}</version>
-                <configuration>
-                    <doCheck>false</doCheck>
-                    <doUpdate>false</doUpdate>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>create</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>${org.codehaus.mojo-findbugs-maven-plugin}</version>
-                <configuration>
-                    <findbugsXmlOutput>true</findbugsXmlOutput>
-                    <xmlOutput>true</xmlOutput>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>${org.codehaus.mojo-sonar-maven-plugin}</version>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>buildnumber-maven-plugin</artifactId>-->
+<!--                <version>${org.codehaus.mojo-buildnumber-maven-plugin}</version>-->
+<!--                <configuration>-->
+<!--                    <doCheck>false</doCheck>-->
+<!--                    <doUpdate>false</doUpdate>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>create</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>findbugs-maven-plugin</artifactId>-->
+<!--                <version>${org.codehaus.mojo-findbugs-maven-plugin}</version>-->
+<!--                <configuration>-->
+<!--                    <findbugsXmlOutput>true</findbugsXmlOutput>-->
+<!--                    <xmlOutput>true</xmlOutput>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>sonar-maven-plugin</artifactId>-->
+<!--                <version>${org.codehaus.mojo-sonar-maven-plugin}</version>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -265,6 +265,7 @@
 
     <modules>
         <module>behavior-cor</module>
+        <module>behavior-observer</module>
         <module>structural-adapter</module>
         <module>structural-bridge</module>
         <module>structural-composite</module>
@@ -274,24 +275,18 @@
         <module>structural-proxy</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
 
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>at.tele2.rma</groupId>
-                <artifactId>adapter</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-dependencies</artifactId>-->
+<!--                <version>${spring-cloud.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
 
     <dependencies>
 
@@ -368,6 +363,12 @@
         <dependency>
             <groupId>org.liquibase</groupId>
             <artifactId>liquibase-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <!-- databases -->

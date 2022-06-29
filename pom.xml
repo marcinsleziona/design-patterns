@@ -64,7 +64,7 @@
         <version.javamelody-core>1.74.0</version.javamelody-core>
         <version.jmockit>0.999.4</version.jmockit>
         <version.joda-time>2.1</version.joda-time>
-        <version.jolokia-core>1.3.5</version.jolokia-core>
+        <version.jolokia-core>1.6.1</version.jolokia-core>
         <version.junitparams>1.0.5</version.junitparams>
         <version.liquibase>3.5.3</version.liquibase>
         <version.mockito>1.10.19</version.mockito>
